@@ -3,22 +3,48 @@
  */
 $(document).ready(function() {
  count = 0;
+    var cats=["billi","billa","billu"];
+     i=0;
+    $(".select").each(function(index){
 
-   
-    $(".select").each(function(){
-            console.log("yes");
-        $(this).click(
-            (function (copy) {
-            return function() {
-                copy = copy + 1;
-                count="YOU clicked " + copy + "times";
-                data=$(this).next('#banner').html();
-                console.log(data)
-                 $(".display").html("")
+
+        console.log(index);
+
+
+        $(this).click((function (copy)
+        {
+            return function()
+            {
+                 name="<h1>"+cats[index]+"</h1>";
+
+
+
+
+              data=$(this).next('#banner').html();
+                console.log(data);
+                 $(".display").html("");
+                 $(".result").html("");
+
+                 $(".display").append(name);
                  $(".display").append(data);
-                $(".display").append(count);
+                count12 = "YOU clicked " + copy + "times";
+                $(".result").html("");
+                $(".result").append(count12);
+                console.log("picture clicked")
+                copy++;
+
+
+
+
+
             }
-        }) (count));
+        }
+        ) (count));
+
+
+
+
+
     });
 
       
