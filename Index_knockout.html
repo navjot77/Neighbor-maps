@@ -9,8 +9,14 @@
 <body>
 
 <h2 data-bind="text: name"></h2>
+<h3 data-bind="text: level"></h3>
 <div data-bind="text: clickCount"></div>
 <img src="" alt="cat pic" data-bind="click: incrementCounter,attr:{src: imgSrc}">
+<ul>NICK NAMES:</ul>
+<div data-bind="foreach: nicknames">
+    <li data-bind="text: $data"></li>
+
+</div>
 
 
 <script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js" ></script>
